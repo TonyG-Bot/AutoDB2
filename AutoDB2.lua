@@ -1,3 +1,4 @@
+-- luacheck: globals AutoDB AutoDB_AutoexecCommandsSet SLASH_AUTODB1
 AutoDB_AutoexecCommandsSet = AutoDB_AutoexecCommandsSet or {["/db chests"] = true, ["/db rares"] = true}
 
 AutoDB = CreateFrame("Frame")

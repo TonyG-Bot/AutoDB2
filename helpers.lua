@@ -1,3 +1,4 @@
+-- luacheck: globals AutoDB
 AutoDB.enumerate = function (iterator)
 	local next = function(iter, i)
 		local value = iter()
