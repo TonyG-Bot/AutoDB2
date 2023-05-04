@@ -1,10 +1,10 @@
 ## Interface: 11200
-## Title: AutoDB
+## Title: AutoDB2
 ## Author: Trckster, Lexie, Refaim
 ## Notes: Automatically runs any pfQuest command after login
 ## Version: 2.0
 ## Dependencies: pfQuest
 ## SavedVariablesPerCharacter: AutoDB_AutoexecCommandsSet
 
-AutoDB.lua
+AutoDB2.lua
 helpers.lua
