@@ -98,16 +98,21 @@ local function DispatchCommand(input)
 	handle(arguments)
 end
 
-local function RunAutoexec()
-	if (IsAddOnLoaded("pfQuest")) then
+AutoDB:RegisterEvent("SKILL_LINES_CHANGED")
+AutoDB:SetScript("OnEvent", function ()
+	if event == "SKILL_LINES_CHANGED" then
+		this.skillsLoaded = true
+	end
+end)
+
+AutoDB:SetScript("OnUpdate", function()
+	if not this.done and this.skillsLoaded then
 		for _, command in ipairs(GetEnabledSortedAutoexecCommands()) do
 			ExecuteSlashCommand(command)
 		end
+		this.done = true
 	end
-end
+end)
 
 SLASH_AUTODB1 = "/autodb"
 SlashCmdList["AUTODB"] = DispatchCommand
-
-AutoDB:RegisterEvent("VARIABLES_LOADED")
-AutoDB:SetScript("OnEvent", RunAutoexec)
