@@ -111,7 +111,9 @@ AutoDB:SetScript("OnUpdate", function()
 			ExecuteSlashCommand(command)
 		end
 		-- Hide world map that might have been opened by some pfQuest commands
-		WorldMapFrame:Hide()
+		if WorldMapFrame:IsShown() then
+			ToggleWorldMap()
+		end
 		this.done = true
 	end
 end)
