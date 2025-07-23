@@ -1,11 +1,12 @@
 -- luacheck: globals AutoDB AutoDB_AutoexecCommandsSet SLASH_AUTODB1
 AutoDB_AutoexecCommandsSet = AutoDB_AutoexecCommandsSet or {
-	["/db track chests"] = true, 
-	["/db track rares"] = true, 
-	["/db track taxi"] = true, 
-	["/db track mailbox"] = true, 
-	["/db track auctioneer"] = true, 
-	["/db track banker"] = true, 
+	["/db track chests"] = true,
+	["/db track rares"] = true,
+	["/db track taxi"] = true,
+	["/db track mailbox"] = true,
+	["/db track auctioneer"] = true,
+	["/db track banker"] = true,
+	["/db track meetingstone"] = true,
 	["/db query"] = true,
 }
 
